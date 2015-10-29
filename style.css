@@ -23,7 +23,7 @@ i {
 .image-holder {
 	width: 642px;
 	height: 531px;
-	background: url('./cloak.png') no-repeat;
+	background: url('./cloak.PNG') no-repeat;
 	background-position-x: left;
 	background-position-y: center;
 	float: left;
