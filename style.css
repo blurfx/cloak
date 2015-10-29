@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding-top: 40px;
+	max-width: 1000px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+a {
+	color: #333333;
+}
+
+i {
+	display: block;
+	color:#555555;
+	font-size: 14px;
+}
+
+.image-holder {
+	width: 642px;
+	height: 531px;
+	background: url('./cloak.png') no-repeat;
+	background-position-x: left;
+	background-position-y: center;
+	float: left;
+}
+
+.info {
+	text-align: center;
+}
+
+.title {
+	font-size: 32px;
+}
+
+.requires {
+	padding-top: 10px;
+	display: block;
+	color: #333333;
+	font-size: 14px;
+}
+
+.download {
+	display: block;
+	padding-top: 20px;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+.howto {
+	border-top: 1px solid #aaaaaa;
+	margin-top: 20px;
+	padding-top: 10px;
+}
+
+.footer {
+	margin-top: 20px;
+}
