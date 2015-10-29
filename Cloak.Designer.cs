@@ -1,6 +1,6 @@
 ﻿namespace Cloak
 {
-    partial class Setting
+    partial class Cloak
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setting));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cloak));
             this.tray = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.iExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,8 +67,8 @@
             this.ShowInTaskbar = false;
             this.Text = "Cloak";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Setting_FormClosing);
-            this.Load += new System.EventHandler(this.Setting_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Cloak_FormClosing);
+            this.Load += new System.EventHandler(this.Cloak_Load);
             this.menuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 

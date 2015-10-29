@@ -12,22 +12,22 @@ using Cloak.Helper;
 
 namespace Cloak
 {
-    public partial class Setting : Form
+    public partial class Cloak : Form
     {
         GlobalKeyHook hook = new GlobalKeyHook();
 
-        public Setting()
+        public Cloak()
         {
             InitializeComponent();
         }
 
-        private void Setting_Load(object sender, EventArgs e)
+        private void Cloak_Load(object sender, EventArgs e)
         {
             //SetHook
             hook.SetHook();
         }
 
-        private void Setting_FormClosing(object sender, FormClosingEventArgs e)
+        private void Cloak_FormClosing(object sender, FormClosingEventArgs e)
         {
             //UnHook
             hook.UnHook();
@@ -38,5 +38,11 @@ namespace Cloak
             this.Close();
         }
 
+        protected override void OnLoad(EventArgs e)
+        {
+            Visible = false;
+            ShowInTaskbar = false;
+            base.OnLoad(e);
+        }
     }
 }
