@@ -20,6 +20,8 @@ i {
 	font-size: 14px;
 }
 
+.nodeco { text-decoration: none; }
+
 .image-holder {
 	width: 642px;
 	height: 531px;
@@ -27,6 +29,11 @@ i {
 	background-position-x: left;
 	background-position-y: center;
 	float: left;
+}
+
+.wrapper{
+	width: 358px;
+	float: right;
 }
 
 .info {
@@ -37,6 +44,10 @@ i {
 	font-size: 32px;
 }
 
+.subtitle {
+	font-size: 24px;
+}
+
 .requires {
 	padding-top: 10px;
 	display: block;
@@ -44,11 +55,26 @@ i {
 	font-size: 14px;
 }
 
+.date {
+	padding-top: 10px;
+	display: block;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.log {
+	display: block;
+	font-size: 14px;
+}
+
 .download {
 	display: block;
-	padding-top: 20px;
 	font-size: 24px;
-	text-decoration: none;
+	border: 1px solid #777777;
+	border-radius: 5px;
+	padding: 3px 8px;
+	width: 126px;
+	margin: 14px auto 0;
 }
 
 .howto {
