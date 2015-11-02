@@ -33,6 +33,7 @@
             this.tray = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.iExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.iAutorun = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,23 +47,32 @@
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iAutorun,
             this.iExit});
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(153, 48);
+            this.menuStrip.Size = new System.Drawing.Size(206, 70);
             // 
             // iExit
             // 
             this.iExit.Name = "iExit";
-            this.iExit.Size = new System.Drawing.Size(152, 22);
+            this.iExit.Size = new System.Drawing.Size(205, 22);
             this.iExit.Text = "E&xit";
             this.iExit.Click += new System.EventHandler(this.iExit_Click);
             // 
-            // Setting
+            // iAutorun
+            // 
+            this.iAutorun.Name = "iAutorun";
+            this.iAutorun.Size = new System.Drawing.Size(205, 22);
+            this.iAutorun.Text = "Run at Windows Startup";
+            this.iAutorun.Click += new System.EventHandler(this.iAutorun_Click);
+            // 
+            // Cloak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(121, 23);
-            this.Name = "Setting";
+            this.DoubleBuffered = true;
+            this.Name = "Cloak";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Cloak";
@@ -79,5 +89,6 @@
         private System.Windows.Forms.NotifyIcon tray;
         private System.Windows.Forms.ContextMenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem iExit;
+        private System.Windows.Forms.ToolStripMenuItem iAutorun;
     }
 }

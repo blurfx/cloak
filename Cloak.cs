@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using System.Diagnostics;
 using Cloak.Helper;
+using Microsoft.Win32;
 
 namespace Cloak
 {
@@ -19,12 +12,19 @@ namespace Cloak
         public Cloak()
         {
             InitializeComponent();
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+
         }
 
         private void Cloak_Load(object sender, EventArgs e)
         {
             //SetHook
             hook.SetHook();
+            RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+            if(registryKey.GetValue("Cloak") != null)
+            {
+                iAutorun.Checked = false;
+            }
         }
 
         private void Cloak_FormClosing(object sender, FormClosingEventArgs e)
@@ -43,6 +43,21 @@ namespace Cloak
             Visible = false;
             ShowInTaskbar = false;
             base.OnLoad(e);
+        }
+
+        private void iAutorun_Click(object sender, EventArgs e)
+        {
+            RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+            if (iAutorun.Checked)
+            {
+                registryKey.DeleteValue("Cloak");
+                iAutorun.Checked = false;
+            }
+            else
+            {
+                registryKey.SetValue("Cloak", Application.ExecutablePath);
+                iAutorun.Checked = true;
+            }
         }
     }
 }
