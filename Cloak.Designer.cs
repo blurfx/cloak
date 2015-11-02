@@ -39,6 +39,8 @@
             // 
             // tray
             // 
+            this.tray.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.tray.BalloonTipText = "Cloak is running";
             this.tray.ContextMenuStrip = this.menuStrip;
             this.tray.Icon = ((System.Drawing.Icon)(resources.GetObject("tray.Icon")));
             this.tray.Text = "Cloak";
@@ -50,7 +52,7 @@
             this.iAutorun,
             this.iExit});
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(206, 70);
+            this.menuStrip.Size = new System.Drawing.Size(206, 48);
             // 
             // iExit
             // 

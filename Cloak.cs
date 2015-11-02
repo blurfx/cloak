@@ -25,6 +25,7 @@ namespace Cloak
             {
                 iAutorun.Checked = false;
             }
+            tray.ShowBalloonTip(5);
         }
 
         private void Cloak_FormClosing(object sender, FormClosingEventArgs e)
